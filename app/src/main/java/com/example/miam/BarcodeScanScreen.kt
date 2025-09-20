@@ -1,5 +1,5 @@
-
 package com.example.miam
+
 import androidx.camera.core.ImageAnalysis
 import androidx.camera.core.ImageProxy
 import androidx.camera.view.CameraController
@@ -36,7 +36,8 @@ fun BarcodeScanScreen(nav: NavHostController) {
 
   val controller = remember {
     LifecycleCameraController(ctx).apply {
-      setEnabledUseCases(CameraController.ALL)
+      // ✅ active PREVIEW + IMAGE_ANALYSIS (bitmask OR en Kotlin)
+      setEnabledUseCases(CameraController.PREVIEW or CameraController.IMAGE_ANALYSIS)
       imageAnalysisBackpressureStrategy = ImageAnalysis.STRATEGY_KEEP_ONLY_LATEST
       setImageAnalysisAnalyzer(ContextCompat.getMainExecutor(ctx)) { imageProxy: ImageProxy ->
         val mediaImage = imageProxy.image

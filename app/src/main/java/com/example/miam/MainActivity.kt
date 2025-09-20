@@ -1,5 +1,5 @@
-
 package com.example.miam
+
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -37,7 +37,7 @@ fun App() {
     Scaffold(topBar = { TopAppBar(title = { Text("Miam") }) }) { padding ->
       NavHost(navController = nav, startDestination = "inventory", modifier = Modifier.padding(padding)) {
         composable("inventory") { InventoryScreen(nav) }
-        composable("suggestions") { SuggestionsScreen(nav) }
+        composable("suggestions") { SuggestionsScreen(nav) }   // ✅ existe maintenant
         composable("shopping") { ShoppingListScreen(nav) }
         composable("scan") { BarcodeScanScreen(nav) }
       }
@@ -75,6 +75,45 @@ fun InventoryScreen(nav: NavHostController, vm: InventoryViewModel = hiltViewMod
         }
       }
     }
-    Button(onClick = { vm.addQuick("Yaourt", "piece", 1.0, "FRIDGE") }, modifier = Modifier.fillMaxWidth()) { Text("Ajouter +1 Yaourt (exemple)") }
+    Button(onClick = { vm.addQuick("Yaourt", "piece", 1.0, "FRIDGE") }, modifier = Modifier.fillMaxWidth()) {
+      Text("Ajouter +1 Yaourt (exemple)")
+    }
+  }
+}
+
+@Composable
+fun SuggestionsScreen(nav: NavHostController, svm: SuggestionViewModel = hiltViewModel()) {
+  val ui by svm.ui.collectAsState()
+  Column(Modifier.fillMaxSize().padding(16.dp)) {
+    Row {
+      OutlinedButton(onClick = { nav.popBackStack() }) { Text("← Stock") }
+      Spacer(Modifier.width(8.dp))
+      Text("Personnes: ${ui.people}")
+      Spacer(Modifier.width(8.dp))
+      Row {
+        Button(onClick = { svm.setPeople((ui.people - 1).coerceAtLeast(1)) }) { Text("-") }
+        Spacer(Modifier.width(4.dp))
+        Button(onClick = { svm.setPeople((ui.people + 1).coerceAtMost(6)) }) { Text("+") }
+      }
+    }
+    Spacer(Modifier.height(8.dp))
+    Row {
+      FilterChip(selected = ui.meal == "midi", onClick = { svm.setMeal("midi") }, label = { Text("Midi") })
+      Spacer(Modifier.width(8.dp))
+      FilterChip(selected = ui.meal == "soir", onClick = { svm.setMeal("soir") }, label = { Text("Soir") })
+    }
+    Spacer(Modifier.height(8.dp))
+    LazyColumn {
+      items(ui.suggestions) { s ->
+        Card(Modifier.fillMaxWidth().padding(vertical = 6.dp)) {
+          Column(Modifier.padding(12.dp)) {
+            Text(s.recipe.title, style = MaterialTheme.typography.titleMedium)
+            Text("Prêt en ${s.recipe.minutes} min • Manquants: ${s.missing.size}")
+            if (s.missing.isNotEmpty()) Text("À acheter : " + s.missing.joinToString())
+            Button(onClick = { /* TODO: flux recette */ }, modifier = Modifier.padding(top = 8.dp)) { Text("Cuisiner") }
+          }
+        }
+      }
+    }
   }
 }
