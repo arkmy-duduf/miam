@@ -1,12 +1,10 @@
-
-package com.example.miam.repository
+﻿package com.example.miam.repository
 import android.content.Context
 import com.example.miam.data.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import org.json.JSONArray
 import java.io.BufferedReader
-
 class Repository(private val db: AppDatabase) {
   suspend fun seedIfEmpty(context: Context) = withContext(Dispatchers.IO) {
     if (db.productDao().search("").isNotEmpty()) return@withContext

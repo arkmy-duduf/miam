@@ -1,5 +1,4 @@
-
-package com.example.miam.data.dao
+﻿package com.example.miam.data.dao
 import androidx.room.*
 import com.example.miam.data.Product
 @Dao interface ProductDao {

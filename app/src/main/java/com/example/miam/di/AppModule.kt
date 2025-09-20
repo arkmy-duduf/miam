@@ -1,5 +1,4 @@
-
-package com.example.miam.di
+﻿package com.example.miam.di
 import android.content.Context
 import com.example.miam.data.AppDatabase
 import com.example.miam.repository.Repository
@@ -12,5 +11,5 @@ import javax.inject.Singleton
 @Module @InstallIn(SingletonComponent::class)
 object AppModule {
   @Provides @Singleton fun provideDb(@ApplicationContext ctx: Context) = AppDatabase.get(ctx)
-  @Provides @Singleton fun provideRepo(db: AppDatabase) = Repository(db)
+  @Provides @Singleton fun provideRepository(db: AppDatabase) = Repository(db)
 }

@@ -1,108 +1,24 @@
-[
-  {
-    "title": "Pâtes carbonara légère",
-    "minutes": 20,
-    "serves": 2,
-    "seasonTags": "hiver;printemps;été;automne",
-    "mealTags": "midi;soir",
-    "ingredients": [
-      {
-        "productName": "Pâtes",
-        "qty": 180,
-        "unit": "g"
-      },
-      {
-        "productName": "Œufs",
-        "qty": 2,
-        "unit": "piece"
-      },
-      {
-        "productName": "Lait",
-        "qty": 50,
-        "unit": "ml"
-      },
-      {
-        "productName": "Lardons",
-        "qty": 80,
-        "unit": "g"
-      },
-      {
-        "productName": "Parmesan",
-        "qty": 20,
-        "unit": "g"
-      }
-    ]
-  },
-  {
-    "title": "Poêlée poulet-légumes",
-    "minutes": 25,
-    "serves": 2,
-    "seasonTags": "printemps;été;automne",
-    "mealTags": "midi;soir",
-    "ingredients": [
-      {
-        "productName": "Poulet",
-        "qty": 250,
-        "unit": "g"
-      },
-      {
-        "productName": "Carotte",
-        "qty": 150,
-        "unit": "g"
-      },
-      {
-        "productName": "Tomate",
-        "qty": 150,
-        "unit": "g"
-      },
-      {
-        "productName": "Petits pois surgelés",
-        "qty": 100,
-        "unit": "g"
-      }
-    ]
-  },
-  {
-    "title": "Soupe de légumes",
-    "minutes": 30,
-    "serves": 2,
-    "seasonTags": "hiver",
-    "mealTags": "midi;soir",
-    "ingredients": [
-      {
-        "productName": "Carotte",
-        "qty": 200,
-        "unit": "g"
-      },
-      {
-        "productName": "Pomme de terre",
-        "qty": 200,
-        "unit": "g"
-      },
-      {
-        "productName": "Lait",
-        "qty": 200,
-        "unit": "ml"
-      }
-    ]
-  },
-  {
-    "title": "Omelette",
-    "minutes": 10,
-    "serves": 1,
-    "seasonTags": "hiver;printemps;été;automne",
-    "mealTags": "midi",
-    "ingredients": [
-      {
-        "productName": "Œufs",
-        "qty": 2,
-        "unit": "piece"
-      },
-      {
-        "productName": "Lait",
-        "qty": 20,
-        "unit": "ml"
-      }
-    ]
-  }
+﻿[
+  {"title":"Pâtes carbonara légère","minutes":20,"serves":2,"seasonTags":"hiver;printemps;été;automne","mealTags":"midi;soir",
+   "ingredients":[
+     {"productName":"Pâtes","qty":180,"unit":"g"},
+     {"productName":"Œufs","qty":2,"unit":"piece"},
+     {"productName":"Lait","qty":50,"unit":"ml"},
+     {"productName":"Lardons","qty":80,"unit":"g"},
+     {"productName":"Parmesan","qty":20,"unit":"g"}]},
+  {"title":"Poêlée poulet-légumes","minutes":25,"serves":2,"seasonTags":"printemps;été;automne","mealTags":"midi;soir",
+   "ingredients":[
+     {"productName":"Poulet","qty":250,"unit":"g"},
+     {"productName":"Carotte","qty":150,"unit":"g"},
+     {"productName":"Tomate","qty":150,"unit":"g"},
+     {"productName":"Petits pois surgelés","qty":100,"unit":"g"}]},
+  {"title":"Soupe de légumes","minutes":30,"serves":2,"seasonTags":"hiver","mealTags":"midi;soir",
+   "ingredients":[
+     {"productName":"Carotte","qty":200,"unit":"g"},
+     {"productName":"Pomme de terre","qty":200,"unit":"g"},
+     {"productName":"Lait","qty":200,"unit":"ml"}]},
+  {"title":"Omelette","minutes":10,"serves":1,"seasonTags":"hiver;printemps;été;automne","mealTags":"midi",
+   "ingredients":[
+     {"productName":"Œufs","qty":2,"unit":"piece"},
+     {"productName":"Lait","qty":20,"unit":"ml"}]}
 ]

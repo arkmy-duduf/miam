@@ -1,62 +1,12 @@
-[
-  {
-    "name": "Pâtes",
-    "unit": "g",
-    "category": "Épicerie",
-    "perishable": false
-  },
-  {
-    "name": "Lait",
-    "unit": "ml",
-    "category": "Crèmerie",
-    "perishable": true
-  },
-  {
-    "name": "Œufs",
-    "unit": "piece",
-    "category": "Crèmerie",
-    "perishable": true
-  },
-  {
-    "name": "Poulet",
-    "unit": "g",
-    "category": "Viande",
-    "perishable": true
-  },
-  {
-    "name": "Carotte",
-    "unit": "g",
-    "category": "Légume",
-    "perishable": true
-  },
-  {
-    "name": "Tomate",
-    "unit": "g",
-    "category": "Légume",
-    "perishable": true
-  },
-  {
-    "name": "Petits pois surgelés",
-    "unit": "g",
-    "category": "Surgelé",
-    "perishable": true
-  },
-  {
-    "name": "Lardons",
-    "unit": "g",
-    "category": "Charcuterie",
-    "perishable": true
-  },
-  {
-    "name": "Parmesan",
-    "unit": "g",
-    "category": "Épicerie",
-    "perishable": true
-  },
-  {
-    "name": "Pomme de terre",
-    "unit": "g",
-    "category": "Légume",
-    "perishable": true
-  }
+﻿[
+  {"name":"Pâtes","unit":"g","category":"Épicerie","perishable":false},
+  {"name":"Lait","unit":"ml","category":"Crèmerie","perishable":true},
+  {"name":"Œufs","unit":"piece","category":"Crèmerie","perishable":true},
+  {"name":"Poulet","unit":"g","category":"Viande","perishable":true},
+  {"name":"Carotte","unit":"g","category":"Légume","perishable":true},
+  {"name":"Tomate","unit":"g","category":"Légume","perishable":true},
+  {"name":"Petits pois surgelés","unit":"g","category":"Surgelé","perishable":true},
+  {"name":"Lardons","unit":"g","category":"Charcuterie","perishable":true},
+  {"name":"Parmesan","unit":"g","category":"Épicerie","perishable":true},
+  {"name":"Pomme de terre","unit":"g","category":"Légume","perishable":true}
 ]

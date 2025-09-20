@@ -1,2 +1,2 @@
--keep class androidx.room.** { *; }
+﻿-keep class androidx.room.** { *; }
 -keep class androidx.compose.** { *; }

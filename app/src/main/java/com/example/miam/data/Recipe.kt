@@ -1,5 +1,4 @@
-
-package com.example.miam.data
+﻿package com.example.miam.data
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 @Entity data class Recipe(
@@ -7,6 +6,6 @@ import androidx.room.PrimaryKey
   val title: String,
   val minutes: Int,
   val serves: Int,
-  val seasonTags: String, // "hiver;ete;..."
-  val mealTags: String    // "midi;soir"
+  val seasonTags: String,
+  val mealTags: String
 )

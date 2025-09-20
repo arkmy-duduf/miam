@@ -1,5 +1,4 @@
-
-package com.example.miam.data
+﻿package com.example.miam.data
 import androidx.room.Entity
 @Entity(primaryKeys=["recipeId","productId"])
 data class RecipeIngredient(

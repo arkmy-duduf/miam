@@ -1,5 +1,4 @@
-
-package com.example.miam.data
+﻿package com.example.miam.data
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 @Entity data class ShoppingItem(
